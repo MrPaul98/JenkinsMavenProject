@@ -19,8 +19,6 @@ pipeline {
                 stage("Consolidate Results") {
                        steps {
                                 input("Do you want to capture results?")
-                                junit '**/target/surefire-rports/Test-*.xml'
-                                archive 'target/*.jar'
                        }
                 }
                 stage("Email buils status"){
